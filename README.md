@@ -7,8 +7,9 @@
 
 本项目是原 `hotel-team-skills` 的中文重构版，不是逐句翻译。它移除了海外连接器、Claude 专用安装方式、外部官网部署和虚构的自动同步能力。
 
-支持的岗位：
+支持的入口与岗位：
 
+- 酒店团队总入口
 - 总经理 / 运营负责人
 - 前厅 / 预订
 - 营收
@@ -46,7 +47,7 @@
 
 ## 使用方式
 
-加载对应岗位目录下的 `SKILL.md`。每次涉及酒店经营数据时，必须调用订单来了 CLI：
+跨模块任务先加载 `hotel-team/SKILL.md`，再按路由加载对应岗位目录下的 `SKILL.md`。每次涉及酒店经营数据时，必须调用订单来了 CLI：
 
 ```text
 mcp__so_agents.so_cli
@@ -60,6 +61,11 @@ mcp__so_agents.so_cli
 ├── 共享运行规则.md
 ├── docs/
 │   └── 能力映射.md
+├── hotel-team/
+│   ├── SKILL.md
+│   └── references/
+│       ├── 示例酒店经营档案.md
+│       └── 调度能力矩阵.md
 ├── hotel-general-manager/SKILL.md
 ├── hotel-front-office/SKILL.md
 ├── hotel-revenue-management/SKILL.md
@@ -69,6 +75,8 @@ mcp__so_agents.so_cli
 ├── hotel-sales-marketing/SKILL.md
 └── hotel-digital-operations/SKILL.md
 ```
+
+每个岗位目录还包含对应的 `references/产物模板.md`。
 
 ## 明确不包含
 
